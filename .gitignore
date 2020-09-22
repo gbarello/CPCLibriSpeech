@@ -1,5 +1,5 @@
 LibriSpeech*
-.ipynb_checkpoints*
+*.ipynb_checkpoints*
 __pycache__/
 *.tar.gz
 models*
