@@ -10,4 +10,5 @@ opt = {
     "num_workers":24,
     "test_dev":"cuda:0",
     "test_batch_size":64,
+    "tsne_spk_frac":.1,
 }

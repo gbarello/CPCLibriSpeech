@@ -8,8 +8,8 @@ from options import opt
 import os
 
 dev = opt["dev"]
-lr_step_rate = opt["lr_step_rate"]#10
-root_data_path = opt["root_data_path"]#"/home/gabriel/Data/LibriSpeech/LibriSpeech_360/train-clean-360/"
+lr_step_rate = opt["lr_step_rate"]
+root_data_path = opt["data_root_path"]
 dev_list = opt["dev_list"]
 batch_size = opt["batch_size"]
 num_workers = opt["num_workers"]
@@ -47,7 +47,7 @@ for epoch in range(n_epochs):
             DP_model.eval()
             
         running_loss = 0
-        for B,meta in tqdm(dataset):
+        for B,spk,rec,sess,chk in tqdm(dataset):
             B.to(dev)
             
             loss = torch.stack(DP_model(B))

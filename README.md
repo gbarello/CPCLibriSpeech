@@ -10,8 +10,8 @@ In order to setup and run the code, first run `setup.sh` to download the data an
 
 ```
 $./setup.sh
-$./train.py
-$./test.py ./models/{model_timestamp}
+$python train.py
+$python test.py ./models/{model_timestamp}
 ```
 
 You may have to change the defaults in `options.py` to make it work on your machine. In particular, I am running on 2 RTX 2080 TI GPUs which allows me to use a batch size of 176 and train 30 epochs in about 12 hours, which is enough to obtain performance similar to Oord et. al. In order to train on more/fewer GPUs and with a larger/smaller batch size, edit the `dev_list` and `batch_size` parameters in `options.py`. You may also want to adjust other parameters such as `num_workers` which I set to the number of processors on my machine.
@@ -27,6 +27,6 @@ Embedding | Test Score | Train Score
 Recurrent | 97.2% | 99.9%
 Feedforward | 37.5% | 52.6%
 
-Here is a sample t-SNE plot of a default run using this repo (and default t-SNE parameters from sklearn):
+Here is a sample t-SNE plot of a default run using this repo (and default t-SNE parameters from sklearn). It is created using only 18 speakers (10\% of the 360-hour dataset):
 
 <img src="./assets/tsne_embedding.jpg" alt="tsne embedding" width="300"/>

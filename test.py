@@ -22,6 +22,7 @@ import sys
 test_dev = opt["test_dev"]
 batch_size = opt["test_batch_size"]
 num_workers = opt["num_workers"]
+tsne_spk_frac = opt["tsne_spk_frac"]
 
 model_dir = str(sys.argv[1])
 
@@ -85,9 +86,7 @@ json.dump({"RNN":{"test":c_test_score,"train":c_train_score},"FFW":{"test":e_tes
 c_tsne = TSNE(2)
 e_tsne = TSNE(2)
 
-tsne_frac = .1
-
-tsne_spk = set(np.random.permutation(list(set(lr_target)))[:int(.1*len(set(lr_target)))])
+tsne_spk = set(np.random.permutation(list(set(lr_target)))[:int(tsne_spk_frac*len(set(lr_target)))])
 
 print(f"Computing t-SNE for {len(tsne_spk)} speakers.")
 
