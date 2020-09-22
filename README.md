@@ -4,6 +4,8 @@ This repo is a simple implementation of the appraoch proposed by Oord et. al. in
 
 The code here includes a minimal implementation of Contrastive Predictive Coding (CPC) for the LibriSpeech dataset (the first experiment in the Oord et. al. paper) and a model which defaults to the same architechture used in Oord et. al. 
 
+I have included a `.yml` file here for the environment I used to create and run this repo. I make no promises that it is at all minimal... but you can use it to recreate my environment if you like.
+
 In order to setup and run the code, first run `setup.sh` to download the data and create the nessecary folders. Then you can run `train.py` from the root directory of the repo and it should just work. The code will create a `./models/` folder and each run of `train.py` will create a new subfolder there (named by timestamp). Finally, to test your model after training, run `test.py ./models/{model_timestamp}/` in order to calculate the linear separablity of speakers in your models learned representation, and a t-SNE plot of the recurrent and feedforward embeddings colored by speaker. i.e. run:
 
 ```

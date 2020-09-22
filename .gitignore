@@ -1,3 +1,5 @@
+LibriSpeech*
+.ipynb_checkpoints*
 __pycache__/
 *.tar.gz
 models*
