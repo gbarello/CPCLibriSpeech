@@ -1,6 +1,6 @@
 # Representation Learning with Contrastive Predictive Coding
 
-This repo is a simple implementation of the appraoch proposed by Oord et. al. in https://arxiv.org/abs/1807.03748. 
+This repo is a simple implementation of the approach proposed by Oord et. al. in https://arxiv.org/abs/1807.03748. 
 
 The code here includes a minimal implementation of Contrastive Predictive Coding (CPC) for the LibriSpeech dataset (the first experiment in the Oord et. al. paper) and a model which defaults to the same architechture used in Oord et. al. 
 
