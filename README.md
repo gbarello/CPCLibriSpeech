@@ -27,6 +27,6 @@ Embedding | Test Score | Train Score
 Recurrent | 97.2% | 99.9%
 Feedforward | 37.5% | 52.6%
 
-Here is a sample t-SNE plot of a default run using this repo (and default t-SNE parameters from sklearn). It is created using only 18 speakers (10\% of the 360-hour dataset):
+Here is a sample t-SNE plot of a default run using this repo (and default t-SNE parameters from sklearn). It is created using only 18 speakers (10\% of the 360-hour dataset, this fraction is also adjustable in `options.py`):
 
 <img src="./assets/tsne_embedding.jpg" alt="tsne embedding" width="300"/>
