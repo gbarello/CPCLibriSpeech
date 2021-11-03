@@ -64,6 +64,7 @@ for epoch in range(n_epochs):
         
         print(f"{phase} loss: {running_loss}")
         if phase is "test" and (best_loss is None or running_loss < best_loss):
+            best_loss = running_loss
             torch.save(model.state_dict(),od + f"/best_model_params")
             
     if (epoch+1) % lr_step_rate == 0:
